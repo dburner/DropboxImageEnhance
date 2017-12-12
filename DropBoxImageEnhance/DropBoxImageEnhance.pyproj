@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>ae3ee22a-4562-476c-86d0-4773821a0cf1</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>TfImageEnhance.py</StartupFile>
+    <StartupFile>TfImageEnhance2.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -23,6 +23,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="TfImageEnhance.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TfImageEnhance2.py">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
