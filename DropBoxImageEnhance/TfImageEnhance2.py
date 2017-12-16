@@ -67,7 +67,7 @@ image_pixels_count = img_h * img_w
 
 white_cost = tf.reduce_sum(tf.pow(enhanced_img - white_img, 2))
 sobel_cost = tf.reduce_sum(tf.pow(enhanced_img_deriv_x - input_img_deriv_x, 2) + tf.pow(enhanced_img_deriv_y - input_img_deriv_y,2))
-cost = white_cost + 0.1 * sobel_cost # + tf.reduce_sum(gain - 1) + tf.reduce_sum(offset)
+cost = white_cost + 0.2 * sobel_cost # + tf.reduce_sum(gain - 1) + tf.reduce_sum(offset)
 
 
 #----------------------------------------------------------
@@ -79,7 +79,7 @@ learning_rate = 0.01
 training_epochs = 100
 display_step = 5
 
-optimizer = tf.train.GradientDescentOptimizer(learning_rate).minimize(cost)
+optimizer = tf.train.AdamOptimizer(learning_rate).minimize(cost)
 
 # Initialize the variables (i.e. assign their default value)
 init = tf.global_variables_initializer()
